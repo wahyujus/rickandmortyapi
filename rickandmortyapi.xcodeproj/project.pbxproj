@@ -16,6 +16,7 @@
 		C01C1BB726E38F8900C7E063 /* rickandmortyapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C1BB626E38F8900C7E063 /* rickandmortyapiTests.swift */; };
 		C01C1BC226E38F8900C7E063 /* rickandmortyapiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C1BC126E38F8900C7E063 /* rickandmortyapiUITests.swift */; };
 		C01C1BD126E390C700C7E063 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C1BD026E390C700C7E063 /* CharacterModel.swift */; };
+		C01C1BD426E393F500C7E063 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C1BD326E393F500C7E063 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C01C1BC126E38F8900C7E063 /* rickandmortyapiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rickandmortyapiUITests.swift; sourceTree = "<group>"; };
 		C01C1BC326E38F8900C7E063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01C1BD026E390C700C7E063 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		C01C1BD326E393F500C7E063 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = rickandmortyapi/Model/Parser.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		C01C1B9E26E38F8800C7E063 /* rickandmortyapi */ = {
 			isa = PBXGroup;
 			children = (
+				C01C1BD226E393DB00C7E063 /* ViewModel */,
 				C01C1BCF26E3909B00C7E063 /* Model */,
 				C01C1B9F26E38F8800C7E063 /* AppDelegate.swift */,
 				C01C1BA126E38F8800C7E063 /* SceneDelegate.swift */,
@@ -137,6 +140,14 @@
 				C01C1BD026E390C700C7E063 /* CharacterModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C01C1BD226E393DB00C7E063 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C01C1BD326E393F500C7E063 /* Parser.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 			files = (
 				C01C1BA426E38F8800C7E063 /* ViewController.swift in Sources */,
 				C01C1BD126E390C700C7E063 /* CharacterModel.swift in Sources */,
+				C01C1BD426E393F500C7E063 /* Parser.swift in Sources */,
 				C01C1BA026E38F8800C7E063 /* AppDelegate.swift in Sources */,
 				C01C1BA226E38F8800C7E063 /* SceneDelegate.swift in Sources */,
 			);
