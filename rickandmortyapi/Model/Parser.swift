@@ -8,7 +8,7 @@
 import Foundation
 
 struct Parser {
-    func parse(){
+    func parse(comp : @escaping ([Result])->()){
         let api = URL(string: "https://rickandmortyapi.com/api/character")
         
         URLSession.shared.dataTask(with: api!){
@@ -20,7 +20,8 @@ struct Parser {
             }
             do{
             let result = try JSONDecoder().decode(CharacterModel.self, from: data!)
-                print(result)
+                comp(result.results)
+//                print(result)
             } catch{
                 
             }

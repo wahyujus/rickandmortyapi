@@ -103,12 +103,12 @@
 		C01C1B9E26E38F8800C7E063 /* rickandmortyapi */ = {
 			isa = PBXGroup;
 			children = (
+				C01C1BD626E3982F00C7E063 /* View */,
 				C01C1BD526E395AC00C7E063 /* Controller */,
 				C01C1BD226E393DB00C7E063 /* ViewModel */,
 				C01C1BCF26E3909B00C7E063 /* Model */,
 				C01C1B9F26E38F8800C7E063 /* AppDelegate.swift */,
 				C01C1BA126E38F8800C7E063 /* SceneDelegate.swift */,
-				C01C1BA526E38F8800C7E063 /* Main.storyboard */,
 				C01C1BA826E38F8800C7E063 /* Assets.xcassets */,
 				C01C1BAA26E38F8800C7E063 /* LaunchScreen.storyboard */,
 				C01C1BAD26E38F8800C7E063 /* Info.plist */,
@@ -156,6 +156,14 @@
 				C01C1BA326E38F8800C7E063 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C01C1BD626E3982F00C7E063 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01C1BA526E38F8800C7E063 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
