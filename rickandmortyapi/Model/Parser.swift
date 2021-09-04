@@ -19,12 +19,12 @@ struct Parser {
                 return
             }
             do{
-            let result = try JSONDecoder().decode(Result.self, from: data!)
+            let result = try JSONDecoder().decode(CharacterModel.self, from: data!)
                 print(result)
             } catch{
                 
             }
             
-        }
+        }.resume()
     }
 }
