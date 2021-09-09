@@ -8,24 +8,50 @@
 import Foundation
 
 struct Parser {
-    func parse(comp : @escaping ([Result])->()){
-        let api = URL(string: "https://rickandmortyapi.com/api/character")
+    private var dataTask: URLSessionDataTask?
+    
+    mutating func getrickandmortyAPI(comp : @escaping ([Result])->()){
         
-        URLSession.shared.dataTask(with: api!){
+        let rickandmortyAPI = "https://rickandmortyapi.com/api/character"
+        let api = URL(string: rickandmortyAPI)
+        
+        // Create URL Session - work on the background
+        dataTask = URLSession.shared.dataTask(with: api!){
             data, response, error in
             
+            // Handle Error
             if error != nil{
-                print(error?.localizedDescription)
+                print(error!.localizedDescription)
                 return
             }
-            do{
-            let result = try JSONDecoder().decode(CharacterModel.self, from: data!)
-                comp(result.results)
-//                print(result)
-            } catch{
-                
+            
+            guard let response = response as? HTTPURLResponse else {
+                // Handle Empty Response
+                print("Empty Response")
+                return
+            }
+            print("Response status code: \(response.statusCode)")
+            
+            guard let data = data else {
+                // Handle Empty Data
+                print("Empty Data")
+                return
             }
             
-        }.resume()
+            do{
+                // Parse the data
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(CharacterModel.self, from: data)
+                
+                // Back to the main thread
+                DispatchQueue.main.async {
+                    comp(result.results)
+                }
+            } catch let error{
+                print(error.localizedDescription)
+            }
+            
+        }
+        dataTask?.resume()
     }
 }
