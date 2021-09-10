@@ -9,7 +9,7 @@ also in this screen im mainly using storyboard for the view controller and i bui
 <br>
 <img alt="1" width="200" src="./assets/detail.png" />
 <br>
-in this screen i put large image on the top, and passing the data from main controller to a list of table cell, since this viewController not using storyboard i initialized tableview delegate in viewdidload, this screen its supposed to have strech header image but i scratch it 🥲,
+in this screen i put large image on the top, and passing the data from main controller to a list of table cell, since this viewController not using storyboard i initialized tableview delegate in viewdidload, this screen its supposed to have strech header image but i scrap it 🥲,
 <br>
 <br>
 sorry i dont put unit test in this repo
