@@ -17,7 +17,12 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
-        // Do any additional setup after loading the view.
+        
+        //Calling the instance of the navigation controller
+        let nav = self.navigationController?.navigationBar
+        nav?.prefersLargeTitles = true
+        nav?.topItem?.title = "Rick and Morty API"
+        
         loadListData()
     }
     
@@ -27,7 +32,6 @@ class ViewController: UIViewController{
             self?.tableView.dataSource = self
             self?.tableView.reloadData()
         }
-        
     }
 }
 
@@ -56,22 +60,19 @@ extension ViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let vc = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController{
+         let vc = StrechHeaderViewController()
             
-            let index = viewModel.characters[indexPath.row]
-            
-            //passing value to new screen
-            vc.img = loadImage(uri: index.image)
-            vc.name = index.name
-            vc.gender = index.gender.rawValue
-            vc.location = index.location.name
-            vc.origin = index.origin.name
-            vc.episode = index.episode
-            
-            //navigator
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }
+        let index = viewModel.characters[indexPath.row]
+        
+        vc.image = loadImage(uri: index.image)
+        vc.model.append("name: " + index.name)
+        vc.model.append("gender: " + index.gender.rawValue)
+        vc.model.append("location: " + index.location.name)
+        vc.model.append("origin: " + index.origin.name)
+        vc.model.append("Episodes:")
+        vc.model.append(contentsOf: index.episode)
+        self.navigationController?.present(vc, animated: true)
+        
     }
     
     func loadImage(uri: String)->UIImage{

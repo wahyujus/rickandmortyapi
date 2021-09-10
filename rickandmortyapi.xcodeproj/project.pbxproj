@@ -19,7 +19,8 @@
 		C01C1BD426E393F500C7E063 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C1BD326E393F500C7E063 /* Parser.swift */; };
 		C01C1BD826E3B20A00C7E063 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C1BD726E3B20A00C7E063 /* CustomTableViewCell.swift */; };
 		C0DAF8F326E99C0800F76648 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAF8F226E99C0800F76648 /* CharacterViewModel.swift */; };
-		C0DAF8F526E9B73200F76648 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAF8F426E9B73200F76648 /* DetailViewController.swift */; };
+		C0DAF8F726EB048D00F76648 /* StrechHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAF8F626EB048D00F76648 /* StrechHeaderViewController.swift */; };
+		C0DAF8FB26EB0B2C00F76648 /* StrechHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAF8FA26EB0B2C00F76648 /* StrechHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,8 @@
 		C01C1BD326E393F500C7E063 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = rickandmortyapi/Model/Parser.swift; sourceTree = SOURCE_ROOT; };
 		C01C1BD726E3B20A00C7E063 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C0DAF8F226E99C0800F76648 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
-		C0DAF8F426E9B73200F76648 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C0DAF8F626EB048D00F76648 /* StrechHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechHeaderViewController.swift; sourceTree = "<group>"; };
+		C0DAF8FA26EB0B2C00F76648 /* StrechHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +164,8 @@
 			children = (
 				C01C1BA326E38F8800C7E063 /* ViewController.swift */,
 				C01C1BD726E3B20A00C7E063 /* CustomTableViewCell.swift */,
-				C0DAF8F426E9B73200F76648 /* DetailViewController.swift */,
+				C0DAF8F626EB048D00F76648 /* StrechHeaderViewController.swift */,
+				C0DAF8FA26EB0B2C00F76648 /* StrechHeaderView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DAF8FB26EB0B2C00F76648 /* StrechHeaderView.swift in Sources */,
+				C0DAF8F726EB048D00F76648 /* StrechHeaderViewController.swift in Sources */,
 				C01C1BD826E3B20A00C7E063 /* CustomTableViewCell.swift in Sources */,
 				C0DAF8F326E99C0800F76648 /* CharacterViewModel.swift in Sources */,
 				C01C1BA426E38F8800C7E063 /* ViewController.swift in Sources */,
@@ -312,7 +317,6 @@
 				C01C1BD426E393F500C7E063 /* Parser.swift in Sources */,
 				C01C1BA026E38F8800C7E063 /* AppDelegate.swift in Sources */,
 				C01C1BA226E38F8800C7E063 /* SceneDelegate.swift in Sources */,
-				C0DAF8F526E9B73200F76648 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
