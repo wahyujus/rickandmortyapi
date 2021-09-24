@@ -7,53 +7,36 @@ import Foundation
 
 // MARK: - CharacterModel
 struct CharacterModel: Codable {
-    let info: Info
-    let results: [Result]
+    var info: Info
+    var results: [CharacterResult]
 }
 
 // MARK: - Info
 struct Info: Codable {
-    let count, pages: Int
-    let next: String
-    let prev: JSONNull?
+    var count, pages: Int
+    var next: String
+    var prev: JSONNull?
 }
 
 // MARK: - Result
-struct Result: Codable {
-    let id: Int
-    let name: String
-    let status: Status
-    let species: Species
-    let type: String
-    let gender: Gender
-    let origin, location: Location
-    let image: String
-    let episode: [String]
-    let url: String
-    let created: String
-}
-
-enum Gender: String, Codable {
-    case female = "Female"
-    case male = "Male"
-    case unknown = "unknown"
+struct CharacterResult: Codable, Hashable {
+    var id: Int
+    var name: String
+    var status: String
+    var species: String
+    var type: String
+    var gender: String
+    var origin, location: Location
+    var image: String
+    var episode: [String]
+    var url: String
+    var created: String
 }
 
 // MARK: - Location
-struct Location: Codable {
-    let name: String
-    let url: String
-}
-
-enum Species: String, Codable {
-    case alien = "Alien"
-    case human = "Human"
-}
-
-enum Status: String, Codable {
-    case alive = "Alive"
-    case dead = "Dead"
-    case unknown = "unknown"
+struct Location: Codable, Hashable {
+    var name: String
+    var url: String
 }
 
 // MARK: - Encode/decode helpers

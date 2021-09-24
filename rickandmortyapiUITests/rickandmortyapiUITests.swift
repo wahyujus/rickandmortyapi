@@ -21,8 +21,42 @@ class rickandmortyapiUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testTapOnTabBars(){
+        let myApp = XCUIApplication()
+        myApp.launch()
+        
+        let app = XCUIApplication()
+        
+        let rickandmortyButton = app.tabBars["Tab Bar"].buttons["RickAndMorty"]
+        rickandmortyButton.tap()
+    }
+    
+    func testCollectionViewTapDetail(){
+        
+        let myApp = XCUIApplication()
+        myApp.launch()
+        
+        let app = XCUIApplication()
+        app.collectionViews.cells.containing(.staticText, identifier:"Rick Sanchez").children(matching: .other).element.tap()
+                        
+    }
+    
+    
+    func testCollectionViewDetailDismiss(){
+        
+        let myApp = XCUIApplication()
+        myApp.launch()
+        
+        let app = XCUIApplication()
+        app.collectionViews.cells.containing(.staticText, identifier:"Rick Sanchez").children(matching: .other).element.tap()
+        app.navigationBars["rickandmortyapi.UserInfoVC"].buttons["Done"].tap()
+                        
+    }
+    
+    
 
-    func testExample() throws {
+    func launchApp() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
